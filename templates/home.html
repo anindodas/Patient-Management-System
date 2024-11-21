@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Doctor Panel</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h2>Welcome, Doctor</h2>
+    <a href="/logout">Logout</a>
+
+    <h3>Add Patient Data</h3>
+    <form method="POST">
+      <label for="name">Patient Name:</label>
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="age">Patient Age:</label>
+      <input type="number" id="age" name="age" required /><br />
+
+      <label for="diagnosis">Diagnosis:</label>
+      <input type="text" id="diagnosis" name="diagnosis" required /><br />
+
+      <button type="submit">Add Patient</button>
+    </form>
+
+    <h3>Patient Records</h3>
+    <ul>
+      {% for patient in patients %}
+      <li>
+        {{ patient.name }}, Age: {{ patient.age }}, Diagnosis: {{
+        patient.diagnosis }}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
