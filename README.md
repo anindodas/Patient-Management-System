@@ -28,27 +28,29 @@ To run this project, you need the following installed on your machine:
 
 ### 1. Clone the Repository
 
+### 1. Clone the Repository
+
 First, clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/anindodas/Patient-Management-System.git
 cd Patient-Management-System
-2. Create and Activate a Virtual Environment
+```
+
+## 2. Create and Activate a Virtual Environment
 For managing dependencies, it is recommended to use a virtual environment:
 
-bash
-Copy code
 python -m venv venv
 # On Windows:
 venv\Scripts\activate
 # On macOS/Linux:
 source venv/bin/activate
+
 3. Install Dependencies
 Install the required Python packages by running:
-
-bash
-Copy code
+```bash
 pip install -r requirements.txt
+```
 4. Firebase Setup
 Create a Firebase project in the Firebase Console.
 Enable Firestore in your Firebase project.
@@ -56,12 +58,15 @@ Generate a Service Account Key:
 Go to the Project Settings in Firebase.
 Navigate to the Service Accounts tab and generate a new private key.
 Download the JSON key and place it in the root of the project as serviceAccountKey.json.
-5. Running the App
-Once everything is set up, you can run the Flask application:
 
-bash
-Copy code
+
+5. Running the App
+Once everything is set up, you can run the Flask application
+```bash
 python app.py
+```
+
+
 By default, the app will be available at http://127.0.0.1:5000/.
 
 6. Accessing the App
@@ -78,17 +83,4 @@ Session Management: The app uses Flask's session mechanism to keep track of the 
 Technologies Used
 Flask: Web framework for Python.
 Firebase Firestore: NoSQL cloud database for storing patient records.
-HTML/CSS: For the frontend interface.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Feel free to fork or clone the repository to contribute or make improvements. If you face any issues, please feel free to raise an issue on GitHub.
-
-markdown
-Copy code
-
-### Additional Notes:
-- This `README.md` file assumes you have the `serviceAccountKey.json` file and Firebase setup completed.
-- The dependencies in `requirements.txt` (`Flask==2.3.3`, `firebase-admin==6.2.0`) are already listed and should install automatically when you run `pip install -r requirements.txt`.
-
-This file provides a clear structure for setting up and running your Flask app and highlights the core features of the Patient
+HTML/CSS: For the frontend interface
